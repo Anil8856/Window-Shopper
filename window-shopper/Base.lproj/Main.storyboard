@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15400" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_5" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15404"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="window_shopper" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="windowShopperBG" translatesAutoresizingMaskIntoConstraints="NO" id="mws-qT-fSw">
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="windowShopperIcon" translatesAutoresizingMaskIntoConstraints="NO" id="6LL-zc-PqI">
+                                <rect key="frame" x="149.66666666666666" y="94" width="114.99999999999997" height="115"/>
+                            </imageView>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" placeholder="Your Hourly Wage" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="v5h-yF-CNK" customClass="CurrencyTextField" customModule="window_shopper" customModuleProvider="target">
+                                <rect key="frame" x="20" y="259" width="374" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="OLV-Oi-6L4"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="20"/>
+                                <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" placeholder="Item Price" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="nlq-uG-doD" customClass="CurrencyTextField" customModule="window_shopper" customModuleProvider="target">
+                                <rect key="frame" x="20" y="329" width="374" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="guu-aH-dgW"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="20"/>
+                                <textInputTraits key="textInputTraits" keyboardType="decimalPad" enablesReturnKeyAutomatically="YES"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="30" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jXV-mZ-203">
+                                <rect key="frame" x="20" y="479" width="374" height="55"/>
+                                <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="40"/>
+                                <color key="textColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hours" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ggC-nU-Kg0">
+                                <rect key="frame" x="20" y="544" width="374" height="28"/>
+                                <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="20"/>
+                                <color key="textColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UiS-pk-RzC">
+                                <rect key="frame" x="20" y="802" width="374" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="xVv-Fy-4r5"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Avenir-Light" family="Avenir" pointSize="20"/>
+                                <state key="normal" title="Clear Calculator">
+                                    <color key="titleColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                </state>
+                                <connections>
+                                    <action selector="clearCalculatorPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="8Se-xX-TpI"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="mws-qT-fSw" secondAttribute="bottom" id="22s-05-AOK"/>
+                            <constraint firstItem="jXV-mZ-203" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="4ED-I7-E4b"/>
+                            <constraint firstItem="ggC-nU-Kg0" firstAttribute="top" secondItem="jXV-mZ-203" secondAttribute="bottom" constant="10" id="4y7-Up-NeJ"/>
+                            <constraint firstItem="jXV-mZ-203" firstAttribute="top" secondItem="nlq-uG-doD" secondAttribute="bottom" constant="100" id="A4L-Vv-6WX"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="v5h-yF-CNK" secondAttribute="trailing" constant="20" id="Au7-Ac-dgn"/>
+                            <constraint firstItem="nlq-uG-doD" firstAttribute="top" secondItem="v5h-yF-CNK" secondAttribute="bottom" constant="20" id="Ecq-8O-vu0"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="UiS-pk-RzC" secondAttribute="bottom" constant="20" id="Ewk-9z-mXP"/>
+                            <constraint firstItem="ggC-nU-Kg0" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="F4X-eb-glh"/>
+                            <constraint firstItem="nlq-uG-doD" firstAttribute="trailing" secondItem="v5h-yF-CNK" secondAttribute="trailing" id="FcF-MT-fCE"/>
+                            <constraint firstItem="6LL-zc-PqI" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Gll-c7-Y0a"/>
+                            <constraint firstItem="v5h-yF-CNK" firstAttribute="top" secondItem="6LL-zc-PqI" secondAttribute="bottom" constant="50" id="KG6-of-OMG"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="mws-qT-fSw" secondAttribute="trailing" id="TVr-Xi-XM3"/>
+                            <constraint firstItem="UiS-pk-RzC" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="X2e-nx-1eg"/>
+                            <constraint firstItem="mws-qT-fSw" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Y28-R8-Zdf"/>
+                            <constraint firstItem="mws-qT-fSw" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="bLu-aF-uOU"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="UiS-pk-RzC" secondAttribute="trailing" constant="20" id="e4t-PQ-agN"/>
+                            <constraint firstItem="v5h-yF-CNK" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="eqh-8K-Dfx"/>
+                            <constraint firstItem="ggC-nU-Kg0" firstAttribute="width" secondItem="jXV-mZ-203" secondAttribute="width" id="hec-43-7Na"/>
+                            <constraint firstItem="v5h-yF-CNK" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="iKY-dS-OM4"/>
+                            <constraint firstItem="jXV-mZ-203" firstAttribute="width" secondItem="nlq-uG-doD" secondAttribute="width" id="qPy-IN-Xco"/>
+                            <constraint firstItem="6LL-zc-PqI" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="50" id="yab-nh-BTo"/>
+                            <constraint firstItem="nlq-uG-doD" firstAttribute="leading" secondItem="v5h-yF-CNK" secondAttribute="leading" id="zts-8t-baJ"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="hoursLabel" destination="ggC-nU-Kg0" id="YEU-dE-w8A"/>
+                        <outlet property="priceText" destination="nlq-uG-doD" id="8Re-uW-Mc8"/>
+                        <outlet property="resultLable" destination="jXV-mZ-203" id="23g-Dd-qHN"/>
+                        <outlet property="wageText" destination="v5h-yF-CNK" id="RJY-Dg-l93"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="131.8840579710145" y="138.61607142857142"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="windowShopperBG" width="414" height="736"/>
+        <image name="windowShopperIcon" width="115" height="115"/>
+    </resources>
+</document>
